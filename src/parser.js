@@ -10,7 +10,7 @@ export function parseMeMd(source, options = {}) {
   let body = source;
 
   if (!match) {
-    errors.push("Missing YAML front matter delimited by ---.);
+    errors.push("Missing YAML front matter delimited by ---. ");
   } else {
     try {
       frontmatter = yaml.load(match[1]) || {};
