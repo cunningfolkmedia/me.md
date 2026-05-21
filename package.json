@@ -1,0 +1,30 @@
+{
+  "name": "@cunningfolk/me-md",
+  "version": "0.1.0",
+  "description": "A portable Markdown context standard for AI collaboration.",
+  "type": "module",
+  "bin": {
+    "me-md": "./bin/me-md.js"
+  },
+  "scripts": {
+    "lint": "node bin/me-md.js lint",
+    "inspect": "node bin/me-md.js inspect",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "llm",
+    "agents",
+    "markdown",
+    "context",
+    "personal-context",
+    "ai-collaboration",
+    "me.md"
+  ],
+  "author": "Cunning Folk Media",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {}
+}
