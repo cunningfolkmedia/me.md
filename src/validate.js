@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import Ajv from "ajv";
+import Ajv2020 from "ajv/dist/2020.js";
 import { fileURLToPath } from "node:url";
 import { REQUIRED_SECTIONS } from "./sections.js";
 
@@ -26,7 +26,7 @@ export function validateMeMd(parsed) {
   const errors = [...parsed.parseErrors];
   const warnings = [];
 
-  const ajv = new Ajv({ allErrors: true });
+  const ajv = new Ajv2020({ allErrors: true });
   const validate = ajv.compile(schema);
   const ok = validate(parsed.frontmatter);
 
